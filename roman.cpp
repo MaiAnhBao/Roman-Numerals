@@ -14,8 +14,6 @@
 
 std::map<char, int> Numerals;
 std::vector<char> Digits {'I','V','X','L','C','D','M'};
-std::vector<char> key { 'I', 'IV', 'V', 'IX', 'X', 'L', 'C', 'D', 'M' };
-std::vector<int> value { 1, 4, 5, 9, 10, 50, 100, 500, 1000 };
 std::vector<std::string> ignoreCases { "IL", "IC", "ID", "IM", "VC", "VX", "VD",
 		"VM", "VL", "XD", "XM", "LC", "LD", "LM", "LL", "VV", "DD" };
 
@@ -340,11 +338,6 @@ int main(int argc, char **argv) {
 	if (argc != 3) {
 		std::cout << "wrong arguments\n";
 		return -1;
-	}
-
-	//init map of numeral
-	for (int i = 0; i < 7; ++i) {
-		Numerals[key.at(i)] = value.at(i);
 	}
 
 	std::string command = argv[1];
