@@ -41,15 +41,6 @@ bool checkValidRomanNumber(std::string strNum) {
 				return false;
 			}
 		}
-//		//Verify that there is no LLL or VVV or DDD
-//		std::string subStrConsecutiveThreeDigits = strNum.substr(var, var + 2);
-//		if ((subStrConsecutiveThreeDigits.compare("LLL") != 0)
-//				|| (subStrConsecutiveThreeDigits.compare("VVV") != 0)
-//				|| (subStrConsecutiveThreeDigits.compare("DDD") != 0)) {
-//			std::cout << "There is IIII or LLL or ";
-//			return false;
-//		}
-
 		//Verify that there is no ignore case
 		std::string subStrConsecutiveTwoDigits = strNum.substr(var, var + 1);
 		auto resultFind = std::find(std::begin(ignoreCases),
@@ -360,12 +351,6 @@ int main(int argc, char **argv) {
 		std::cout << "unknown parameter\n";
 	}
 
-//	if (not checkValidationRomanNumber(romanNumeral)) {
-//		std::cout << "wrong format" << std::endl;
-//		return -1;
-//	} else {
-//		std::cout << convertRomanToArabic(romanNumeral);
-//	}
 
 	return 0;
 }
